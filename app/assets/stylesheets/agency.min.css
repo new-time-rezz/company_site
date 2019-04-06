@@ -165,7 +165,7 @@ img::-moz-selection {
 header.masthead {
     text-align: center;
     color: #fff;
-    background-image: url(../assets/header-bg.jpg);
+    background-image: url(../assets/img-1.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -647,6 +647,10 @@ section#contact :-ms-input-placeholder {
     font-weight: 700;
     color: #ced4da;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+}
+
+section#services {
+    background-color: #fed179;
 }
 
 footer {
