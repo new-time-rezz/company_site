@@ -650,7 +650,11 @@ section#contact :-ms-input-placeholder {
 }
 
 section#services {
-    background-color: #fed179;
+    background-color: #dce3ed;
+}
+
+section#about{
+    background-color: #edf1f7;
 }
 
 footer {
