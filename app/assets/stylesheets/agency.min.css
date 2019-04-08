@@ -165,7 +165,7 @@ img::-moz-selection {
 header.masthead {
     text-align: center;
     color: #fff;
-    background-image: url(../assets/img-1.jpg);
+    background-image: url(https://s3.amazonaws.com/newtimerezz/img-1.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -594,7 +594,7 @@ header.masthead .intro-text .intro-heading {
 
 section#contact {
     background-color: #212529;
-    background-image: url(../assets/map-image.png);
+    background-image: url(https://s3.amazonaws.com/newtimerezz/map-image.png);
     background-repeat: no-repeat;
     background-position: center
 }
