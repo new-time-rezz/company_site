@@ -1,26 +1,25 @@
 class WelcomeController < ApplicationController
 
 	def index
-  	
+  	 @contact = Contact.new
   	end
 
 	def create
-  		@contact = Contact.new(contact_params)
-			respond_to do |format|
+    @contact = Contact.new(contact_params)
 
-			if @contact.save
-			        format.html { redirect_to '/', notice: 'Message was successfully Sent.' }
-			        format.json { render :index, status: :created, location: @contact }
-			else
-			        format.html { render :index }
-			        format.json { render json: @contact.errors, status: :unprocessable_entity }
-      		end
-    	end
-	end
+      if @contact.save
+          ContactsMailer.general_message(@contact).deliver_now
+          redirect_to "/"
+
+      else
+          redirect_to "/"
+
+      end
+  end
 
   	private
 
-  	def contact_params
-      params(:contact).permit(:name, :email, :phone, :message)
+  	 def contact_params
+      params.require(:contact).permit(:name, :email, :phone, :message)
     end
 end

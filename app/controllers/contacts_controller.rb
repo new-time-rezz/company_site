@@ -25,10 +25,6 @@ class ContactsController < ApplicationController
   # POST /contacts.json
   def create
     @contact = Contact.new(contact_params)
-    @name = params[:name]
-    @email = params[:email]
-    @phone = params[:phone]
-    @message = params[:message]
 
       if @contact.save
           ContactsMailer.general_message(@contact).deliver_now
