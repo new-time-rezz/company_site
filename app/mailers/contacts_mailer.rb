@@ -1,5 +1,5 @@
 class ContactsMailer < ActionMailer::Base
-  # default from: "newtimerezz@gmail.com"
+  default from: "newtimerezz@gmail.com"
 
   
   
