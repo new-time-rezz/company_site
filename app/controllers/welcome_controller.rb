@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
     @contact = Contact.new(contact_params)
 
       if @contact.save
-          ContactsMailer.general_message(@contact).deliver
+          ContactsMailer.general_message(@contact).deliver_now
           redirect_to "/"
 
       else
