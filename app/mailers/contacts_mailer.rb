@@ -1,4 +1,7 @@
 class ContactsMailer < ActionMailer::Base
+	require 'sendgrid-ruby'
+	include SendGrid
+
   default from: "newtimerezz@gmail.com"
 
   
