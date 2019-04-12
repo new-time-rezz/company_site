@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
       if @contact.save
-          ContactsMailer.general_message(@contact).deliver_now
+          ContactsMailer.general_message(@contact).deliver_later
           redirect_to "/"
 
       else
