@@ -33,7 +33,9 @@ gem 'popper_js'
 
 gem 'figaro'
 
-gem 'sendgrid-ruby'
+# gem 'sendgrid-ruby'
+
+gem 'bootstrap-email'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

@@ -1,13 +1,11 @@
 class ContactsMailer < ActionMailer::Base
-	require 'sendgrid-ruby'
-	include SendGrid
 
-  default from: "newtimerezz@gmail.com"
+  default from: "inquiry@newtimerezz.com"
 
   
   
   def general_message(contact)
     @contact = contact
-    mail( :to => "kevindevastian@gmail.com", :subject => "You Have a Message From Your Website")
+    make_bootstrap_mail( to: "kevindevastian@gmail.com", subject:  "You have a message from a  new Client !!", from: "inquiry@newtimerezz.com", )
   end
 end

@@ -1,17 +1,36 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
   <html>
     <head>
-      <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag "contacts-mailer", media: "all" %>
     </head>
 
-    <body>
+    <body class="bg-light">
 
-    <h1>You have a new message from, <%= @contact.name %><%=@contact.email %><%= @contact.phone %></h1>
-    <p>
-      With the message : <%= @contact.message %> <br>
-    </p>
+    <h1>You have a new message from a client,</h1>
 
+    <h3 class="alert alert-primary" role="alert">
+      Clients name : <%= @contact.name %></h3>
+      <br>
 
+      <h4 class="alert alert-info" role="alert">
+        Clients email :  <%=@contact.email %></h4>
+      </h4>
+      <br>
+
+      <h4 class="alert alert-info" role="alert">
+        Clients phone number : <%= @contact.phone %>
+      </h4>
+      <br>
+    
+    <h2 class="alert alert-success" role="alert">
+      Cilents Message:  <br>
+    </h2>
+
+    <h4 class="alert alert-success" role="alert"><%= @contact.message %></h4>
+
+      <%= yield %>
     </body>
 
   </html>
