@@ -32,6 +32,8 @@ gem 'jquery-rails'
 gem 'popper_js'
 
 gem 'figaro'
+
+gem 'sendgrid-ruby'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
